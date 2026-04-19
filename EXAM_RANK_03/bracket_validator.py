@@ -1,0 +1,31 @@
+def bracket_validator(to_test: str) -> bool:
+
+    stack = []
+    pairs = {')': '(', ']': '[', '}': '{'}
+
+    for char in to_test:
+        if char in "([{":
+            stack.append(char)
+        elif char in ")]}":
+            if not stack:
+                return False
+            if stack[-1] != pairs[char]:
+                return False
+            stack.pop()
+
+    return len(stack) == 0
+
+
+if __name__ == "__main__":
+
+    print(bracket_validator("()"))
+    print(bracket_validator("()[]{}"))
+    print(bracket_validator("{[()]}"))
+    print(bracket_validator(""))
+    print(bracket_validator("hello(hhhh)world{ho}w are"), "\n")
+
+    print(bracket_validator("(]"))
+    print(bracket_validator("([)]"))
+    print(bracket_validator("((("))
+    print(bracket_validator("())"))
+    print(bracket_validator("{[(])}"))
