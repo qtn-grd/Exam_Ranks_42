@@ -1,15 +1,11 @@
-def twister(arr: list, round: int) -> list[int]:
+def twister(arr: list, n: int) -> list:
 
     if not arr:
         return []
 
-    length = len(arr)
+    n = n % len(arr)
 
-    round = round % length
-
-    result = arr[-round:] + arr[:-round]
-
-    return result
+    return arr[-n:] + arr[:-n]
 
 
 if __name__ == "__main__":

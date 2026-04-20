@@ -1,4 +1,4 @@
-def shift_alphabet(to_shift: str, round: int) -> str:
+def shift_alphabet(to_shift: str, notch: int) -> str:
 
     result = []
 
@@ -8,7 +8,7 @@ def shift_alphabet(to_shift: str, round: int) -> str:
                 base = ord("a")
             else:
                 base = ord("A")
-            shifted = (ord(char) - base + round) % 26
+            shifted = (ord(char) - base + notch) % 26
             result.append(chr(base + shifted))
         else:
             result.append(char)

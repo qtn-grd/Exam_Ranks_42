@@ -1,11 +1,11 @@
 def sculptor(to_sculpt: str) -> str:
 
-    low = to_sculpt.lower()
+    to_sculpt = to_sculpt.lower()
 
     count = False
     result = ""
 
-    for char in low:
+    for char in to_sculpt:
         if not char.isalpha():
             result += char
         else:
