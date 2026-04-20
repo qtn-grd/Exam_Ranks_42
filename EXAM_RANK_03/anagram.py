@@ -6,10 +6,7 @@ def anagram(first: str, second: str) -> bool:
     first = ''.join(char for char in first if char.isalpha())
     second = ''.join(char for char in second if char.isalpha())
 
-    if sorted(first) == sorted(second):
-        return True
-    else:
-        return False
+    return sorted(first) == sorted(second)
 
 
 if __name__ == "__main__":

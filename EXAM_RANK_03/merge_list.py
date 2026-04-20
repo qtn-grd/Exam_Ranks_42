@@ -7,9 +7,7 @@ def merge_list(list1: list[int], list2: list[int]) -> list[int]:
 
     merged = list1 + list2
 
-    sorted_result = sorted(merged)
-
-    return sorted_result
+    return sorted(merged)
 
 
 if __name__ == "__main__":
