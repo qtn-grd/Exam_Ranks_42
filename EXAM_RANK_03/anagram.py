@@ -11,8 +11,8 @@ def anagram(first: str, second: str) -> bool:
 
 if __name__ == "__main__":
 
-    print(anagram("racecar", "carrace"))
+    print(anagram("race1car", "carr1ace"), "\n")
 
-    print(anagram("racecar", "carace"))
+    print(anagram("racecar", "carace"), "\n")
 
     print(anagram("Conversation", "Voices rant on"))
