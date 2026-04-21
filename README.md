@@ -68,7 +68,7 @@ Explanations:
     Once the base-10 value is obtained, the function converts it to the target base by repeatedly dividing by the target base and collecting remainders.
     These remainders correspond to digits in the new base.
 
-    The result is built as a string and returned.
+    The result is built as a string, who is reversed and returned.
 
     If the value is zero, the function directly returns "0". Any invalid input triggers an error message.
 </details>
