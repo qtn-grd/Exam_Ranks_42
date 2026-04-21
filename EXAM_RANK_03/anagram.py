@@ -1,12 +1,9 @@
-def anagram(first: str, second: str) -> bool:
+def anagram(s: str, t: str) -> bool:
 
-    first = first.upper()
-    second = second.upper()
+    s = ''.join(char.upper() for char in s if char.isalpha())
+    t = ''.join(char.upper() for char in t if char.isalpha())
 
-    first = ''.join(char for char in first if char.isalpha())
-    second = ''.join(char for char in second if char.isalpha())
-
-    return sorted(first) == sorted(second)
+    return sorted(s) == sorted(t)
 
 
 if __name__ == "__main__":

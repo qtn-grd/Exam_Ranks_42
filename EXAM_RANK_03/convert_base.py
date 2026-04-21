@@ -26,7 +26,7 @@ def convert_base(num: str, from_base: int, to_base: int) -> str:
             result = result + digits[value % to_base]
             value = value // to_base
 
-        return result
+        return result[::-1]
 
     except Exception:
         return "Error / invalid input"

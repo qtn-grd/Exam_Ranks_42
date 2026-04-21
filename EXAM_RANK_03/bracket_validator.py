@@ -1,9 +1,9 @@
-def bracket_validator(to_test: str) -> bool:
+def bracket_validator(s: str) -> bool:
 
     stack = []
     pairs = {')': '(', ']': '[', '}': '{'}
 
-    for char in to_test:
+    for char in s:
         if char in "([{":
             stack.append(char)
         elif char in ")]}":
