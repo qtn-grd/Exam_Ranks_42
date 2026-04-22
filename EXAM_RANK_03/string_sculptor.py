@@ -3,21 +3,20 @@ def sculptor(text: str) -> str:
     text = text.lower()
 
     count = False
-    result = ""
+    result = []
 
     for char in text:
         if not char.isalpha():
-            result += char
+            result.append(char)
         else:
             if not count:
-                result += char
+                result.append(char)
                 count = True
             else:
-                char = char.upper()
-                result += char
+                result.append(char.upper())
                 count = False
 
-    return result
+    return ''.join(result)
 
 
 if __name__ == "__main__":
