@@ -34,24 +34,31 @@ def convert_base(num: str, from_base: int, to_base: int) -> str:
 
 if __name__ == "__main__":
 
+    print("Basic conversions")
     print(convert_base("1010", 2, 10))
     print(convert_base("10", 10, 2))
     print(convert_base("1A", 16, 10))
     print(convert_base("26", 10, 16), "\n")
 
+    print("Same base")
     print(convert_base("123", 10, 10), "\n")
 
+    print("Edge cases")
     print(convert_base("0", 10, 2))
     print(convert_base("000", 2, 10), "\n")
 
+    print("Larger bases")
     print(convert_base("ZZZ", 36, 10))
     print(convert_base("46655", 10, 36), "\n")
 
+    print("Uppercase handling")
     print(convert_base("A", 16, 10))
     print(convert_base("F", 16, 10), "\n")
 
+    print("Mixed digits and letters")
     print(convert_base("1F4", 16, 10))
     print(convert_base("500", 10, 16), "\n")
 
+    print("Invalid cases")
     print(convert_base("2", 2, 10))
     print(convert_base("G", 16, 10))

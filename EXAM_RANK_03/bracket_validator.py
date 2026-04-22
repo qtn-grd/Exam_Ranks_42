@@ -18,12 +18,14 @@ def bracket_validator(s: str) -> bool:
 
 if __name__ == "__main__":
 
+    print("Valid cases")
     print(bracket_validator("()"))
     print(bracket_validator("()[]{}"))
     print(bracket_validator("{[()]}"))
     print(bracket_validator(""))
     print(bracket_validator("hello(hhhh)world{ho}w are"), "\n")
 
+    print("Invalid cases")
     print(bracket_validator("(]"))
     print(bracket_validator("([)]"))
     print(bracket_validator("((("))

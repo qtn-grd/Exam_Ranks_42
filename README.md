@@ -17,42 +17,7 @@ For Rank 03, this repository lists all exercises I have heard about so far.
 Explanations:
 
 <details>
-<summary>anagram</summary>
-<br/>
-
-    The function normalizes both input strings by converting them to uppercase,
-    ensuring a case-insensitive comparison.
-
-    It then filters out any non-alphabetic characters, keeping only letters.
-
-    The cleaned strings are sorted and compared.
-
-    If they match, it means both strings contain the same characters with the same frequency,and are therefore anagrams.
-</details>
-
-<details>
-<summary>bracket_validator</summary>
-<br/>
-
-    We use a stack to track opening brackets as we scan the string from left to right.
-
-    Each time we encounter an opening bracket ((, [, {), we push it onto the stack.
-    
-    When we encounter a closing bracket (), ], }), we first check if the stack is empty,
-    which would mean there is no matching opening bracket.
-
-    If not empty, we compare the top element of the stack with the expected matching opening bracket.
-
-    If they do not match, the string is invalid.
-    
-    Otherwise, we remove the top element from the stack, as the pair is correctly matched.
-
-    After processing all characters, the string is valid only if the stack is empty,
-    meaning all brackets were properly opened and closed in the correct order.
-</details>
-
-<details>
-<summary>convert_base</summary>
+<summary>convert_base / base_converter.py</summary>
 <br/>
 
     The function converts a number from one base to another by using an intermediate base-10 representation.
@@ -74,7 +39,41 @@ Explanations:
 </details>
 
 <details>
-<summary>is_palindrome</summary>
+<summary>bracket_validator / bracket_validator.py</summary>
+<br/>
+
+    We use a stack to track opening brackets as we scan the string from left to right.
+
+    Each time we encounter an opening bracket ((, [, {), we push it onto the stack.
+    
+    When we encounter a closing bracket (), ], }), we first check if the stack is empty,
+    which would mean there is no matching opening bracket.
+
+    If not empty, we compare the top element of the stack with the expected matching opening bracket.
+
+    If they do not match, the string is invalid.
+    
+    Otherwise, we remove the top element from the stack, as the pair is correctly matched.
+
+    After processing all characters, the string is valid only if the stack is empty,
+    meaning all brackets were properly opened and closed in the correct order.
+</details>
+
+<details>
+<summary>sort_string / cryptic_sorter.py</summary>
+<br/>
+
+    The function sorts a list of strings using multiple criteria combined into a single sorting key.
+
+    It defines a set of vowels (both lowercase and uppercase) for efficient membership checks.
+
+    The sorted() function is then used with a custom key defined by a lambda function.
+
+    For each word, the key is a tuple containing: the number of vowels in the word (computed by iterating through its characters), the length of the word, and the word itself for lexicographical comparison.
+</details>
+
+<details>
+<summary>is_palindrome / echo_validator.py</summary>
 <br/>
 
     The function first normalizes the input string by removing all non-alphanumeric characters and converting the remaining ones to lowercase, ensuring that case and formatting do not affect the comparison.
@@ -89,37 +88,7 @@ Explanations:
 </details>
 
 <details>
-<summary>merge_list</summary>
-<br/>
-
-    The function combines two input lists and returns a new sorted list containing all their elements.
-
-    It first checks whether either list is empty or None, and replaces such cases with empty lists to ensure safe concatenation.
-
-    The two lists are then merged using list addition, creating a new list that contains all elements from both inputs.
-
-    Finally, the sorted() function is applied to this merged list, returning a new list with elements in ascending order.
-</details>
-
-<details>
-<summary>pattern_tracker</summary>
-<br/>
-
-    The function iterates through the string starting from the second character, comparing each character with its immediate predecessor.
-
-    For each pair of adjacent characters, it first checks whether both are digits using isdigit().
-
-    If so, it converts them to integers and verifies whether the current digit is exactly one greater than the previous one.
-    
-    If this condition is satisfied, the counter is incremented.
-
-    By restricting the check to consecutive positions, the function ensures only adjacent pairs are considered.
-
-    After processing the entire string, it returns the total count of valid digit pairs.
-</details>
-
-<details>
-<summary>reverse_matrix</summary>
+<summary>reverse_matrix / mirror_matrix.py</summary>
 <br/>
 
     The function reverses a 2D matrix by treating it as a flattened sequence of elements.
@@ -138,7 +107,51 @@ Explanations:
 </details>
 
 <details>
-<summary>sculptor</summary>
+<summary>pattern_tracker / pattern_tracker.py</summary>
+<br/>
+
+    The function iterates through the string starting from the second character, comparing each character with its immediate predecessor.
+
+    For each pair of adjacent characters, it first checks whether both are digits using isdigit().
+
+    If so, it converts them to integers and verifies whether the current digit is exactly one greater than the previous one.
+    
+    If this condition is satisfied, the counter is incremented.
+
+    By restricting the check to consecutive positions, the function ensures only adjacent pairs are considered.
+
+    After processing the entire string, it returns the total count of valid digit pairs.
+</details>
+
+<details>
+<summary>merge_list / shadow_merge.py</summary>
+<br/>
+
+    The function combines two input lists and returns a new sorted list containing all their elements.
+
+    It first checks whether either list is empty or None, and replaces such cases with empty lists to ensure safe concatenation.
+
+    The two lists are then merged using list addition, creating a new list that contains all elements from both inputs.
+
+    Finally, the sorted() function is applied to this merged list, returning a new list with elements in ascending order.
+</details>
+
+<details>
+<summary>anagram / string_permutation_checker.py</summary>
+<br/>
+
+    The function normalizes both input strings by converting them to uppercase,
+    ensuring a case-insensitive comparison.
+
+    It then filters out any non-alphabetic characters, keeping only letters.
+
+    The cleaned strings are sorted and compared.
+
+    If they match, it means both strings contain the same characters with the same frequency,and are therefore anagrams.
+</details>
+
+<details>
+<summary>sculptor / string_sculptor.py</summary>
 <br/>
 
     The function transforms the input string by alternating the case of alphabetic characters while leaving non-alphabetic characters unchanged.
@@ -155,7 +168,24 @@ Explanations:
 </details>
 
 <details>
-<summary>shift_alphabet</summary>
+<summary>twister / twist_sequence.py</summary>
+<br/>
+
+    The function rotates a list by shifting its elements to the right by n positions while preserving order.
+    
+    It first handles the edge case of an empty list by returning an empty result.
+    
+    The value of n is normalized using modulo with the list length, ensuring that rotations larger than the list size (or negative values) are correctly handled.
+    
+    The rotation is performed using slicing: the last n elements are moved to the front, and the remaining elements follow.
+    
+    This effectively wraps elements around the list without modifying the original.
+    
+    The result is a new list containing the rotated elements.
+</details>
+
+<details>
+<summary>shift_alphabet / whisper_cipher.py</summary>
 <br/>
 
     The function applies a shift to each alphabetic character in the string while preserving case and leaving other characters unchanged.
@@ -172,36 +202,6 @@ Explanations:
 
     Finally, the result is joined into a string and returned.
    
-</details>
-
-<details>
-<summary>sort_string</summary>
-<br/>
-
-    The function sorts a list of strings using multiple criteria combined into a single sorting key.
-
-    It defines a set of vowels (both lowercase and uppercase) for efficient membership checks.
-
-    The sorted() function is then used with a custom key defined by a lambda function.
-
-    For each word, the key is a tuple containing: the number of vowels in the word (computed by iterating through its characters), the length of the word, and the word itself for lexicographical comparison.
-</details>
-
-<details>
-<summary>twister</summary>
-<br/>
-
-    The function rotates a list by shifting its elements to the right by n positions while preserving order.
-    
-    It first handles the edge case of an empty list by returning an empty result.
-    
-    The value of n is normalized using modulo with the list length, ensuring that rotations larger than the list size (or negative values) are correctly handled.
-    
-    The rotation is performed using slicing: the last n elements are moved to the front, and the remaining elements follow.
-    
-    This effectively wraps elements around the list without modifying the original.
-    
-    The result is a new list containing the rotated elements.
 </details>
 
 ## 🔄 Updates

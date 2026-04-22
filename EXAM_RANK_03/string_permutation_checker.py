@@ -8,8 +8,9 @@ def anagram(s: str, t: str) -> bool:
 
 if __name__ == "__main__":
 
-    print(anagram("race1car", "carr1ace"), "\n")
+    print("Valid cases")
+    print(anagram("race1car", "carr1ace"))
+    print(anagram("Conversation", "Voices rant on"), "\n")
 
-    print(anagram("racecar", "carace"), "\n")
-
-    print(anagram("Conversation", "Voices rant on"))
+    print("Invalid case")
+    print(anagram("racecar", "carace"))
